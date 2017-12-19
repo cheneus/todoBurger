@@ -1,0 +1,27 @@
+{
+  "name": "todoburger",
+  "version": "1.0.0",
+  "description": "todo list with burger as a theme?",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "CHen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.10.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheneus/todoBurger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cheneus/todoBurger/issues"
+  },
+  "homepage": "https://github.com/cheneus/todoBurger#readme"
+}
