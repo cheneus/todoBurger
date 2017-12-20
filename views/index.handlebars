@@ -9,8 +9,8 @@
           {{#each burgers}} {{#unless this.devoured}}
           <li data-burger={{this.id}} class="my-2">
             <label> {{this.burger_name}}</label>
-            <button class='btn btn-success eat float-right'>Nom</button>
             <button class='btn btn-danger delete float-right'>x</button>
+            <button class='btn btn-success eat float-right'>Nom</button>
           </li>
           {{/unless}} {{/each}}
         </ul>
