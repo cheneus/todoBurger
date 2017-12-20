@@ -9,4 +9,8 @@ devoured boolean not null default 0,
 date timestamp,
 primary key (id)
 )
-select * from burgers
+select * from burgers;
+
+UPDATE burgers SET devoured=1 WHERE id=1;
+
+create database blogger;

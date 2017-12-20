@@ -4,36 +4,38 @@
   <div id="readyToBe" class="col-md-6">
     <div class="card">
       <h4 class="card-header">Cant Wait to be eaten</h4>
-      <div class="card-block pt-2">
+      <div class="card-block px-2">
         <ul>
           {{#each burgers}} {{#unless this.devoured}}
-          <li>
-            <label data-burger={{this.id}} class="form-control-label"> {{this.burger_name}}
-              <button class='btn btn-success eat'>Nom</button>
-              <button class='btn btn-danger delete'>x</button>
-            </label>
+          <li data-burger={{this.id}} class="my-2">
+            <label> {{this.burger_name}}</label>
+            <button class='btn btn-success eat float-right'>Nom</button>
+            <button class='btn btn-danger delete float-right'>x</button>
           </li>
           {{/unless}} {{/each}}
         </ul>
       </div>
     </div>
   </div>
-  <div id="eaten" class="col-md-6">
-    <h4>Goodbye World</h4>
-    <ul>
-      {{#each burgers}} {{#if this.devoured}}
-      <li>
-       <label>{{this.burger_name}}
-          <button class='btn btn-default'>x</button>
-        </label>
-      </li>
-      {{/if}} {{/each}}
-    </ul>
+  <div id="eaten" class="col-md-6 my-2 my-md-0">
+    <div class="card">
+      <h4 class="card-header">Goodbye World</h4>
+      <div class="card-block px-2">
+        <ul>
+          {{#each burgers}} {{#if this.devoured}}
+          <li data-burger={{this.id}} class="my-2">
+            <label>{{this.burger_name}}</label>
+            <button class='btn btn-danger delete float-right'>x</button>
+          </li>
+          {{/if}} {{/each}}
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 <div class="row my-2">
   <div class="col ">
-    <form action="/" method="POST">
+    <form action="/add" method="POST">
       <div class="form-group">
         <label for="addBurger">Add a new burger to your eating list!</label>
         <input type="text" id="addBurger" name="burger_name" class="form-control">
